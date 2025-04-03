@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thyroid Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Thyroid Disease Classification</h1>
+        <img src="{{ url_for('static', filename='thyroid_image.png') }}" alt="Thyroid Image" class="thyroid-image">
+        <form action="/predict" method="post">
+            <label for="thyroxine">Thyroxine:</label>
+            <input type="text" name="thyroxine" required>
+
+            <label for="tsh">TSH:</label>
+            <input type="text" name="tsh" required>
+
+            <label for="max_t3">Max-T3:</label>
+            <input type="text" name="max_t3" required>
+
+            <label for="max_t3_yj">Max-T3_YJ:</label>
+            <input type="text" name="max_t3_yj" required>
+
+            <label for="triiodothyronine">Triiodothyronine:</label>
+            <input type="text" name="triiodothyronine" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
